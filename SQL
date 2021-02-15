@@ -1,0 +1,21 @@
+//Using H2 SQL Database 
+
+//Creating table patients with columns: name, address, id, and email
+create table patients (name varchar(30), address varchar(100), id int primary key, email varchar(100));
+
+//5 values (rows) will be inserted into the table patients
+insert into patients values ('Jim', '345 New York Ave', 5678, 'jim@gmail.com'); 
+insert into patients values ('Sarah', '546 East 9th St', 6555, 'sarah@gmail.com'); 
+insert into patients values ('Leah', '654 Brooklyn Ave', 1234, 'leah@gmail.com'); 
+insert into patients values ('Rachel', '3233 Bedford Ave', 9988, 'rachel@gmail.com'); 
+insert into patients values ('Rebecca', '7899 Utah Ave', 6098, 'becky@gmail.com');
+
+//altering table patients by adding a column money_spent
+alter table patients add column money_spent int; 
+
+//updating table patients by adding values to money_spent per row based on name
+update patients set money_spent= 66 where name='Jim';
+update patients set money_spent= 76 where name='Rachel';
+update patients set money_spent= 886 where name='Rebecca';
+update patients set money_spent= 556 where name='Leah';
+update patients set money_spent= 346 where name='Sarah';
